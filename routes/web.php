@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 //追加したコントローラー
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,10 @@ use App\Http\Controllers\HelloController;
 |
 */
 
-
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);
 /* Route::get('/hello', function(){
     return view('hello.index');
 }); */
-
-Route::get('/hello', [HelloController::class, 'index']);
