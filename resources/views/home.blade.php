@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>hello</title>
+        <title>紹介ページ</title>
     </head>
 
     <body>
-        <h1>test</h1>
+        <h1>紹介ページテスト</h1>
+        test
     </body>
 </html>
