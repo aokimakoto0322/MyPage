@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-//追加したコントローラー
-use App\Http\Controllers\HelloController;
+//コントローラー
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Introduction;
+use App\Http\Controllers\News;
+use App\Http\Controllers\Contact;
+use App\Http\Controllers\Confirm;
+use App\Http\Controllers\Send;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,16 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/introduction', [Introduction::class, 'index']);
+
+Route::get('/news', [News::class, 'index']);
+
+Route::get('/contact', [Contact::class, 'index']);
+
+Route::any('/confirm', [Confirm::class, 'post']);
+
+Route::any('/send', [Send::class, 'post']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);

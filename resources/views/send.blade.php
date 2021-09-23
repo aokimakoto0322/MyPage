@@ -1,7 +1,7 @@
 @extends('layout.parent')
 
 {{-- ページタイトル設定 --}}
-@section('Pagetitle', 'home')
+@section('Pagetitle', 'お問い合わせ完了')
 
 
 {{-- head --}}
@@ -13,13 +13,9 @@
 {{-- コンテンツ --}}
 @section('content')
     <body>
-        @isset($news)
-            @foreach ($news as $item)
-            <div class="container">
-                {{ $item->topic ?? 'a' }}
-            </div>
-            @endforeach
-        @endisset
+        <div class="container mt-5 p-lg-5">
+            <p class="lead ml-2">お問い合わせ完了いたしました。</p>
+        </div>
     </body>
 @endsection
 

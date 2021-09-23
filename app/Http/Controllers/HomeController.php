@@ -8,6 +8,8 @@ use Illuminate\Http\Response;
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        //トピックの取得
+        $topics = \DB::select('select * from news where enableflag = 1');
+        return view('home', ['news' => $topics]);
     }
 }
