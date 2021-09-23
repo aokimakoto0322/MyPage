@@ -1,8 +1,7 @@
 @extends('layout.parent')
 
 {{-- ページタイトル設定 --}}
-@section('Pagetitle', 'home')
-
+@section('Pagetitle', 'メンバー紹介')
 
 {{-- head --}}
 @include('layout.head')
@@ -13,13 +12,7 @@
 {{-- コンテンツ --}}
 @section('content')
     <body>
-        @isset($news)
-            @foreach ($news as $item)
-            <div class="container">
-                {{ $item->topic ?? 'a' }}
-            </div>
-            @endforeach
-        @endisset
+        <p>紹介</p>
     </body>
 @endsection
 
