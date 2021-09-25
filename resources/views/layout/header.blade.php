@@ -2,7 +2,7 @@
     <header>
         <nav class="navbar navbar-dark navbar-expand-md bg-dark">
             <a class="navbar-brand" href="/">
-                <img src="/img/logo.png" class="logo-img mx-4" width="350px" height="auto">
+                <img src="/img/logo.png" class="logo-img mx-4" width="auto" height="50px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarmenu" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

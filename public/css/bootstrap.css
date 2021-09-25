@@ -10716,3 +10716,30 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
+
+.fadeIn {
+  transform: translate3d(0, 10px, 0);
+  transition: 1s;
+  opacity: 0;
+}
+
+.fadeIn.animated {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.imgWrap {
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+}
+.imgWrap img {
+	display: block;
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+.imgWrap img:hover {
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+.newslink {
+  text-decoration: none;
+}
