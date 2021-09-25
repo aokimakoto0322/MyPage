@@ -14,13 +14,27 @@
 @section('content')
     <body>
         {{-- カルーセルバナー --}}
-        <div class="sliderArea">
-            <div class="full-screen slider">
-              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
+        @if (isset($carousel))
+            <div class="sliderArea">
+                <div class="full-screen slider">
+                    @foreach ($carousel as $item)
+                        <div class="slick-list">
+                            
+                            @if ($item->clickUrl != "")
+                                <a href="{{ $item->clickUrl }}">
+                            @endif
+                                <img class="rounded" src="{{ $item->imgUrl }}">
+
+                            @if ($item->clickUrl != "")
+                                </a>
+                            @endif
+                            
+                        </div>
+                    @endforeach
+                </div>
             </div>
-          </div>
+        @endif
+        
 
         {{-- ライバー紹介エリア --}}
         <div class="fadeIn container mx-auto mt-5">
@@ -56,7 +70,7 @@
                                     <a class="newslink" href="{{ $item->url }}">
                                 @endif
                                     <div class="imgWrap">
-                                        <img width="100%" height="300" src="{{ $item->imageUrl ?? '' }}">
+                                        <img width="100%" height="auto" src="{{ $item->imageUrl ?? '' }}">
                                     </div>
                                     
                                     {{-- サブジェクト --}}

@@ -225,14 +225,14 @@
 
   .sliderArea {
     max-width: 100%;
-    margin: 50px auto;
+    margin: 100px auto 100px;
     padding: 0 25px;
   }
   .sliderArea.w300 {
     max-width: 300px;
   }
   .slick-slide {
-    margin: 0 50px;
+    margin: 0 10px;
   }
   .slick-slide img {
     width: 100%;
