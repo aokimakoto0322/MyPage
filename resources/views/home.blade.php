@@ -16,11 +16,9 @@
         {{-- カルーセルバナー --}}
         <div class="sliderArea">
             <div class="full-screen slider">
-              <div><img src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div><img src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div><img src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div><img src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
-              <div><img src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
+              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
+              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
+              <div class="slick-list"><img class="rounded" src="https://cdn.pixabay.com/photo/2021/07/28/08/44/elephants-6498609_960_720.jpg"></div>
             </div>
           </div>
 
