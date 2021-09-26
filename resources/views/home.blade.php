@@ -19,7 +19,7 @@
                 <div class="full-screen slider">
                     @foreach ($carousel as $item)
                         <div class="slick-list">
-                            
+
                             @if ($item->clickUrl != "")
                                 <a href="{{ $item->clickUrl }}">
                             @endif
@@ -39,7 +39,7 @@
         {{-- ライバー紹介エリア --}}
         <div class="fadeIn container mx-auto mt-5">
             <h1 class="display-5">ライバー</h1>
-            <a href="/" class="p-3">
+            <a href="./introduction" class="p-3">
                 <div class="card shadow-lg imgWrap">
                     <div class="row">
                         <div class="col-xl-6 d-flex align-items-center">
