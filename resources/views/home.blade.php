@@ -13,41 +13,66 @@
 {{-- コンテンツ --}}
 @section('content')
     <body>
+        {{-- カルーセルバナー --}}
+        @if (isset($carousel))
+            <div class="sliderArea">
+                <div class="full-screen slider">
+                    @foreach ($carousel as $item)
+                        <div class="slick-list">
 
-        {{-- ライバー紹介エリア --}}
-        <div class="container mx-auto mt-5">
-            <h1 class="display-5 my-4 mx-2">ライバー</h1>
-            <div class="card shadow-lg">
-                <div class="row">
-                    <div class="col-md-5 mx-auto d-flex align-items-center">
-                        <div class="row">
-                            <h2 class="display-6">理念</h2>
-                            <p>ライバーの理念とかどういう目標があって活動してますとかいろいろやってます的なテキスト</p>
-                            <p>ライバーの理念とかどういう目標があって活動してますとかいろいろやってます的なテキスト</p>
+                            @if ($item->clickUrl != "")
+                                <a href="{{ $item->clickUrl }}">
+                            @endif
+                                <img class="rounded" src="{{ $item->imgUrl }}">
+
+                            @if ($item->clickUrl != "")
+                                </a>
+                            @endif
+                            
                         </div>
-                    </div>
-                    <div class="col-md-5 mx-auto my-2">
-                        <img src="/img/k1.jpg" width="auto" height="800px">
-                    </div>
+                    @endforeach
                 </div>
             </div>
+        @endif
+        
+
+        {{-- ライバー紹介エリア --}}
+        <div class="fadeIn container mx-auto mt-5">
+            <h1 class="display-5">ライバー</h1>
+            <a href="./introduction" class="p-3">
+                <div class="card shadow-lg imgWrap">
+                    <div class="row">
+                        <div class="col-xl-6 d-flex align-items-center">
+                            <div class="row-md-6">
+                                <h2 class="display-6 text-dark mx-3 my-3">理念</h2>
+                                <div class="lead text-dark card-text mx-3 my-5">ライバーの理念とかどういう目標があって活動してますとかいろいろやってます的なテキスト</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 mx-auto">
+                            <img src="/img/k1.jpg" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
         
         {{--　トピックエリア  --}}
         @isset($news)
             <div class="container mx-auto mt-5">
-                <h1 class="display-5 my-4 mx-2">トピックス</h2>
+                <h1 class="display-5 my-4 mx-2">ニューストピックス</h2>
                 <div class="row">
                     @foreach ($news as $item)
-                        <div class="col-md">
-                            <div class="card shadow-lg">
+                        <div class="fadeIn col-md">
+                            <div class="card shadow-lg my-2">
 
                                 {{-- リンクがある場合はタグ設定 --}}
                                 @if ($item->url != "")
-                                    <a href="{{ $item->url }}">
+                                    <a class="newslink" href="{{ $item->url }}">
                                 @endif
-                                    <img width="100%" height="300" src="{{ $item->imageUrl ?? '' }}">
-
+                                    <div class="imgWrap">
+                                        <img width="100%" height="auto" src="{{ $item->imageUrl ?? '' }}">
+                                    </div>
+                                    
                                     {{-- サブジェクト --}}
                                     <div class="card-body">
                                         <h2 class="lead">{{ $item->topic ?? 'a' }}</h2>
