@@ -6,4 +6,5 @@
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}" media="screen" />
     <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" media="screen" />
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 @endsection
