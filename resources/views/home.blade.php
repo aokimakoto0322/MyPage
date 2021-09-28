@@ -43,10 +43,10 @@
             <a href="./introduction" class="p-3">
                 <div class="card shadow-lg imgWrap">
                     <div class="row">
-                        <div class="col-xl-6 mx-auto">
+                        <div class="col-sm-6 mx-auto">
                             <img src="/img/k1.jpg" width="100%" height="100%">
                         </div>
-                        <div class="col-xl-6 d-flex align-items-center">
+                        <div class="col-sm-6 d-flex align-items-center">
                             <div class="row">
                                 <h2 class="display-6 text-dark px-4 my-4 px-4 py-4">理念</h2>
                                 <p class="lead text-dark px-4 py-4">ライバーの理念とかどういう目標があって活動してますとかいろいろやってます的なテキスト</p>
