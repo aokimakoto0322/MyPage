@@ -14,7 +14,7 @@
 @section('content')
     <body>
         <body>
-            <div class="container p-lg-5 bg-light">
+            <div class="container p-lg-5 bg-light mt-5">
                 <div class="py-5 text-center">
                     <h2>お問い合わせフォーム</h2>
                     <p class="lead">なんかといあわせについて説明</p>

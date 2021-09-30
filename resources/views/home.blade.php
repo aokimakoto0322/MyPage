@@ -77,13 +77,13 @@
                                     
                                     {{-- サブジェクト --}}
                                     <div class="card-body">
-                                        <h2 class="display-6 mt-3 ml-3">{{ $item->topic ?? 'a' }}</h2>
+                                        <h2 class="text-dark display-6 mt-3 ml-3">{{ $item->topic ?? 'a' }}</h2>
 
                                         {{-- 日付 --}}
-                                        <span class="lead ml-5">{{ $item->postDate ?? '' }}</span>
+                                        <span class="text-dark lead ml-5">{{ $item->postDate ?? '' }}</span>
 
                                         {{-- トピックスボディ --}}
-                                        <div class="card-text mt-3">
+                                        <div class="text-dark card-text mt-3">
                                             {{ $item->detail }}
                                         </div>
                                     </div>

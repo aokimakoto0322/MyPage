@@ -14,7 +14,7 @@
             <ul id="navigation">
               <li><a href="/" class="p-3 text-dark">Home</a></li>
               <li><a href="/news" class="p-3 text-dark">News</a></li>
-              <li><a href="./introduction" class="p-3 text-dark">Member</a></li>
+              <li><a href="/introduction" class="p-3 text-dark">Member</a></li>
               <li><a href="#" class="p-3 text-dark">Guidline</a></li>
               <li><a href="./contact" class="p-3 text-dark">Contact</a></li>
             </ul>
