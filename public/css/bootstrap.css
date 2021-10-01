@@ -6204,8 +6204,20 @@ textarea.form-control-lg {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+.shadow-lg1{
+  box-shadow: 1rem 1rem 1rem rgba(136, 164, 245, 0.175) !important;
+}
+
+.shadow-lg1:hover{
+  box-shadow: 1rem 1rem 10rem 1rem rgba(136, 163, 245, 0.322) !important;
+}
+
+.shadow-lg2 {
+  box-shadow: 1rem 1rem 1rem rgba(162, 106, 252, 0.175) !important;
+}
+
+.shadow-lg2:hover{
+  box-shadow: 1rem 1rem 10rem 1rem rgba(162, 106, 252, 0.322) !important;
 }
 
 .shadow-none {
