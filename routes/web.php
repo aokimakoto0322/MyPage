@@ -9,6 +9,7 @@ use App\Http\Controllers\News;
 use App\Http\Controllers\Contact;
 use App\Http\Controllers\Confirm;
 use App\Http\Controllers\Send;
+use App\Http\Controllers\Detail;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('/contact', [Contact::class, 'index']);
 Route::any('/confirm', [Confirm::class, 'post']);
 
 Route::any('/send', [Send::class, 'post']);
+
+Route::get('/detail', [Detail::class, 'index']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);

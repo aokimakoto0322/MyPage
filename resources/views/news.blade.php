@@ -40,13 +40,13 @@
                         <img class="col-sm-4" src="{{ $item->imageUrl ?? '' }}">
                         
                         <div class="col-sm-8">
-                            <h5 class="display-6 mt-4 mx-1">{{ $item->topic ?? 'a' }}</h5>
+                            <h5 class="display-6 mt-4 mx-1 text-dark">{{ $item->topic ?? 'a' }}</h5>
     
                             {{-- 日付 --}}
-                            <span class="lead mx-2">{{ $item->postDate ?? '' }}</span>
+                            <span class="lead mx-2 text-dark">{{ $item->postDate ?? '' }}</span>
         
                             {{-- トピックスボディ --}}
-                            <div class="mx-4 my-3">
+                            <div class="mx-4 my-3 text-dark">
                                 {{ $item->detail }}
                             </div>
                         </div>
