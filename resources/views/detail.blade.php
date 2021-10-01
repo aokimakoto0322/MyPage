@@ -21,7 +21,7 @@
                             <img class="d-block mx-auto" height="auto" width="100%" src="{{ $item->image }}">
                         </div>
                         <div class="col-md-6">
-                            <h1 class="display-2 mt-5 px-2">{{ $item->name }} / {{ $item->nameAlpha }}</h1>
+                            <h1 class="display-2 mt-5 px-2">{{ $item->name }}<br> {{ $item->nameAlpha }}</h1>
                             <span class="lead mt-4 mb-5 px-4">{{ $item->intro }}</span>
                             {{-- 紹介動画 --}}
                             @if ($item->introVideo)
@@ -29,6 +29,18 @@
                                     <iframe width="560" height="315" src="{{ $item->introVideo }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             @endif
+                            <div class="row">
+                                @if ($item->youtube)
+                                    <div class="col">
+                                        <a href="{{ $item->youtube }}"><img class="d-block mx-auto" src="/img/youtube_icon.png"></a>
+                                    </div>
+                                @endif
+                                @if ($item->twitter)
+                                    <div class="col">
+                                        <a href="{{ $item->twitter }}"><img class="d-block mx-auto" src="/img/twitter_icon.png"></a>
+                                    </div>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
