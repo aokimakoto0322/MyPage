@@ -25,8 +25,8 @@
                             <span class="lead mt-4 mb-5 px-4">{{ $item->intro }}</span>
                             {{-- 紹介動画 --}}
                             @if ($item->introVideo)
-                                <div class="mt-5">
-                                    <iframe width="560" height="315" src="{{ $item->introVideo }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="{{ $item->introVideo }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             @endif
                             <div class="row">
