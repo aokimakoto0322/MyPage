@@ -29,17 +29,5 @@
                 });
             });
         })(jQuery);
-
-        (function($) {
-            $('.character1').on('click', function(){
-                alert($('.character1').attr('uniq'));
-            });
-            $('.character2').on('click', function(){
-                alert($('.character2').attr('uniq'));
-            });
-            $('.character3').on('click', function(){
-                alert($('.character3').attr('uniq'));
-            });
-        })(jQuery);
     </script>
 @endsection

@@ -203,5 +203,22 @@
       .nav-bg.active {
         opacity: 1;
       }
-      
 }
+
+@keyframes fadeIn {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  1% {
+    display: none;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
