@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-//コントローラー
+//フロントコントローラー
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Introduction;
 use App\Http\Controllers\News;
@@ -10,6 +10,10 @@ use App\Http\Controllers\Contact;
 use App\Http\Controllers\Confirm;
 use App\Http\Controllers\Send;
 use App\Http\Controllers\Detail;
+
+//管理コントローラー
+use App\Http\Controllers\Admin;
+use App\Http\Controllers\AdminHome;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +25,8 @@ use App\Http\Controllers\Detail;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//フロント
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -35,6 +41,15 @@ Route::any('/confirm', [Confirm::class, 'post']);
 Route::any('/send', [Send::class, 'post']);
 
 Route::get('/detail', [Detail::class, 'index']);
+
+
+//管理画面
+
+Route::get('/admin', [Admin::class, 'index']);
+
+Route::post('/admin', [Admin::class, 'post']);
+
+Route::get('/adminhome', [AdminHome::class, 'index']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);
