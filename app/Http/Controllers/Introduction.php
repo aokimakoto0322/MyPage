@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 class Introduction extends Controller
 {
     public function index(){
-        return view('introduction');
+        //メンバーの取得
+        $member = \DB::table('member')->get();
+
+        //送るデータの作成
+        $result = ['memb' => $member];
+
+        return view('introduction', $result);
     }
 }
