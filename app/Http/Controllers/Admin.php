@@ -6,7 +6,19 @@ use Illuminate\Http\Request;
 
 class Admin extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+
+        //GETパラメータからAuthを取得
+        $auth = $request->auth;
+
+        //日付を取得
+        $today = date("Ym");
+
+        //日付とAuthパラメータが不一致の場合は404リダイレクト
+        if($auth != $today){
+            return \App::abort(404);
+        }
+
         $user = array();
         $user['id'] = "";
         $user['password'] = "";
