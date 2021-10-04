@@ -52,7 +52,7 @@ class Admin extends Controller
             //ログイン成功
             $_SESSION['userid'] = $request['id'];
 
-            return redirect('/adminhome');
+            return redirect('admin/adminhome');
 
         }else{
             //ログイン失敗
