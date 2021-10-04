@@ -14,6 +14,8 @@ use App\Http\Controllers\Detail;
 //管理コントローラー
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\AdminHome;
+use App\Http\Controllers\Topbanner;
+use App\Http\Controllers\Topbanner2;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +51,13 @@ Route::get('/admin', [Admin::class, 'index']);
 
 Route::post('/admin', [Admin::class, 'post']);
 
-Route::get('/adminhome', [AdminHome::class, 'index']);
+Route::any('/admin/adminhome', [AdminHome::class, 'index']);
+
+Route::get('/admin/topbanner', [Topbanner::class, 'index']);
+
+Route::get('/admin/topbanner2', [Topbanner2::class, 'get']);
+
+Route::post('/admin/topbanner2', [Topbanner2::class, 'post']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);
