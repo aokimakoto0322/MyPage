@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminHome extends Controller
+class Topbanner extends Controller
 {
     public function index(){
         //セッションスタート
@@ -12,9 +12,9 @@ class AdminHome extends Controller
 
         //ログイン情報保持確認
         if(!isset($_SESSION['userid'])){
-            return redirect('/admin');
+            return \App::abort(404);
         }
-
-        return view('/admin/adminhome');
+        
+        return view('admin/topbanner');
     }
 }
