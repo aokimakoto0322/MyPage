@@ -12,7 +12,7 @@ class Topbanner extends Controller
 
         //ログイン情報保持確認
         if(!isset($_SESSION['userid'])){
-            return redirect('/admin?auth='.date("Ym"));
+            return \App::abort(404);
         }
         
         return view('admin/topbanner');
