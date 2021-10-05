@@ -22,8 +22,8 @@ class Topbanner2 extends Controller
         //フォームデータ取得（画像保存）
         $banner = array();
         $banner["img"] = $resuest->bannerimg->store('banner');
-        $banner["startdate"] = $resuest->startdate;
-        $banner["enddate"] = $resuest->enddate;
+        $banner["startdate"] = date('Y-m-d h:i:s', strtotime($resuest->startdate));
+        $banner["enddate"] = date('Y-m-d h:i:s', strtotime($resuest->enddate));
         $banner["clickUrl"] = $resuest->clickUrl;
         $banner["enableflag"] = $resuest->enableflag;
 

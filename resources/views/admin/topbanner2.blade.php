@@ -33,9 +33,9 @@
 
             <h4 class="mt-4">表示・非表示設定</h4>
             @if ($enableflag == 0)
-                <p>表示</p>
+                <p>非表示</p>
             @else
-                <p>非表示</p>         
+                <p>表示</p>         
             @endif
         
             <input type="hidden" name="img" value="{{ $img }}">
