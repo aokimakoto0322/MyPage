@@ -17,7 +17,7 @@
 @section('admincontent')
     <div class="container mt-4">
         <h1 class="my-4">TOPバナー新規追加画面</h1>
-        <form action="/admin/topbanner2?page=2" class="needs-validation" enctype="multipart/form-data" method="POST">
+        <form action="/admin/topbanner2" class="needs-validation" enctype="multipart/form-data" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 <h4 class="lead">TOPバナー画像選択</h4>
@@ -29,14 +29,16 @@
                 <h4 class="lead mt-3">掲示終了時間</h4>
                 <input type="datetime-local" name="enddate" required>
 
+                
+                <h4 class="lead mt-3">バナー押下時の遷移先URL</h4>
+                <input type="url" name="clickUrl" required>
+
                 <div class="mt-2">
-                    <label for="enablecheck" class="lead mt-3">表示・非表示設定（チェックで表示）</label>
-                    <input id="enablecheck" type="checkbox" name="enableflag">
+                    <h4 class="lead mt-3">表示・非表示設定</h4>
+                    <input id="enablecheck" type="radio" name="enableflag" value="0" required>非表示
+                    <input id="enablecheck" type="radio" name="enableflag" value="1" required>表示
                 </div>
             </div>
-
-            
-            <input type="hidden" name="page" value="page1">
             
             <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">確認画面</button>
             

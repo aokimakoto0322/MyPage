@@ -16,21 +16,15 @@ class Topbanner2 extends Controller
 
         //ログイン情報保持確認
         if(!isset($_SESSION['userid'])){
-            return redirect('/admin?auth='.date("Ym"));
+            return \App::abort(404);
         }
 
-        //ページ遷移チェック
-        if($resuest->page != "page1"){
-            return redirect('admin/topbanner2');
-        }
-        //画像保存
-        ;
-
-        //フォームデータ取得
+        //フォームデータ取得（画像保存）
         $banner = array();
-        $banner["img"] = "/storage/app/".$resuest->bannerimg->store('banner');
-        $banner["startdate"] = $resuest->startdate;
-        $banner["enddate"] = $resuest->enddate;
+        $banner["img"] = $resuest->bannerimg->store('banner');
+        $banner["startdate"] = date('Y-m-d h:i:s', strtotime($resuest->startdate));
+        $banner["enddate"] = date('Y-m-d h:i:s', strtotime($resuest->enddate));
+        $banner["clickUrl"] = $resuest->clickUrl;
         $banner["enableflag"] = $resuest->enableflag;
 
         

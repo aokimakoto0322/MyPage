@@ -8,9 +8,9 @@
           </button>
           <div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarSupportedContent">
             <div class="navbar-nav mr-auto">
-              <a class="nav-link ms-2" href="/admin/topbanner">TOPバナー画像設定</a>
-              <a class="nav-link ms-2" href="#">ニュース設定</a>
-              <a class="nav-link ms-2" href="#">メンバーリスト設定</a>
+              <a class="nav-link ms-2" href="/admin/topbanner">TOPバナー新規作成</a>
+              <a class="nav-link ms-2" href="#">ニュース新規作成</a>
+              <a class="nav-link ms-2" href="#">メンバーリスト新規追加</a>
               <form class="d-flex ms-5" method="post" action="/admin">
                 {{ csrf_field() }}
                 <input type="hidden" name="logout" value="logout">

@@ -38,7 +38,7 @@ class Admin extends Controller
             }
             session_destroy();
 
-            return redirect('/admin');
+            return redirect('/admin?auth='.date("Ym"));
         }
 
         $user = array();
