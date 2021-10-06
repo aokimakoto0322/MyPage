@@ -30,7 +30,7 @@ class Topbanneredit2 extends Controller
         
 
         //画像削除
-        Storage::delete('app/'.$filename);
+        Storage::delete($filename);
 
         //フォームデータ取得（画像保存）
         $banner = array();
@@ -41,16 +41,16 @@ class Topbanneredit2 extends Controller
         $banner["enableflag"] = $resuest->enableflag;
 
         //SQLにバナーデータをUPDATE
-        \DB::table('carousel')
-        ->where('imgUrl', '/'.$banner["img"])
-        ->where('startDate', date('Y-m-d h:i:s', strtotime($resuest->startdate)))
-        ->where('endDate', date('Y-m-d h:i:s', strtotime($resuest->enddate)))
-        ->where('clickUrl', $banner["clickUrl"])
-        ->where('enableFlag', $banner["enableflag"])
-        ->update(['id' => $resuest->itemid]);
+        $result = \DB::table('carousel')
+        ->where('id', $resuest->itemid)
+        ->update([
+            'imgUrl'    => '/'.$banner["img"],
+            'startDate' => date('Y-m-d h:i:s', strtotime($resuest->startdate)),
+            'endDate'   => date('Y-m-d h:i:s', strtotime($resuest->enddate)),
+            'clickUrl'  => $banner["clickUrl"],
+            'enableFlag'=> $banner["enableflag"]
+        ]);
 
-        /* \DB::update('update carousel set imgUrl = '.'/'.$banner["img"].', startDate = '. date('Y-m-d h:i:s', strtotime($resuest->startdate)).', endDate = '.date('Y-m-d h:i:s', strtotime($resuest->enddate)).', clickUrl = '.$banner["clickUrl"].', enableFlag = '.$banner["enableflag"].'WHERE id = '.$resuest->itemid);
- */
         return view('admin/topbanneredit2', $banner);
     }
 }
