@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Topbanner3 extends Controller
 {
     public function get(){
-        return redirect('admin/topbanner');
+        return redirect('admin/topbanner2');
     }
 
     public function post(Request $resuest){
@@ -18,17 +18,25 @@ class Topbanner3 extends Controller
         if(!isset($_SESSION['userid'])){
             return \App::abort(404);
         }
-        
+
+        //フォームデータ取得（画像保存）
+        $banner = array();
+        $banner["img"] = $resuest->bannerimg->store('banner');
+        $banner["startdate"] = date('Y-m-d h:i:s', strtotime($resuest->startdate));
+        $banner["enddate"] = date('Y-m-d h:i:s', strtotime($resuest->enddate));
+        $banner["clickUrl"] = $resuest->clickUrl;
+        $banner["enableflag"] = $resuest->enableflag;
 
         //SQLにバナーデータを保存
         \DB::table('carousel')->insert([
-            'imgUrl'    => $resuest->img,
-            'startDate' => $resuest->startdate,
-            'endDate'   => $resuest->enddate,
+            'imgUrl'    => '/'.$banner["img"],
+            'startDate' => date('Y-m-d h:i:s', strtotime($resuest->startdate)),
+            'endDate'   => date('Y-m-d h:i:s', strtotime($resuest->enddate)),
             'clickUrl'  => $resuest->clickUrl,
             'enableFlag'=> $resuest->enableflag
         ]);
 
-        return view('admin/topbanner3');
+        
+        return view('admin/topbanner3', $banner);
     }
 }

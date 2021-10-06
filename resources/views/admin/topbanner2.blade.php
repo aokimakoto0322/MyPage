@@ -15,38 +15,33 @@
 
 {{-- コンテンツ --}}
 @section('admincontent')
-    <h1 class="mx-4 my-4">TOPバナー確認画面</h1>
     <div class="container">
-        <form action="/admin/topbanner3" enctype="multipart/form-data" method="POST">
+        <form action="/admin/topbanner3" class="needs-validation" enctype="multipart/form-data" method="POST">
             {{ csrf_field() }}
-            <h4 class="lead">TOPバナー画像</h4>
-            <img src="{{ asset($img) }}">
-
-            <h4 class="mt-4">掲載開始期間</h4>
-            <p>{{ $startdate }}</p>
-
-            <h4 class="mt-4">掲載終了期間</h4>
-            <p>{{ $enddate }}</p>
-
-            <h4 class="mt-4">バナー押下時の遷移先URL</h4>
-            <p>{{ $clickUrl }}</p>
-
-            <h4 class="mt-4">表示・非表示設定</h4>
-            @if ($enableflag == 0)
-                <p>非表示</p>
-            @else
-                <p>表示</p>         
-            @endif
-        
-            <input type="hidden" name="img" value="{{ $img }}">
-            <input type="hidden" name="startdate" value="{{ $startdate }}">
-            <input type="hidden" name="enddate" value="{{ $enddate }}">
-            <input type="hidden" name="clickUrl" value="{{ $clickUrl }}">
-            <input type="hidden" name="enableflag" value="{{ $enableflag }}">
-
-            <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">設定をする</button>
+            <div class="form-group">
+                <h3>TOPバナー画像選択</h3>
+                <input type="file" name="bannerimg" required>
+    
+                <h3 class="mt-3">掲示開始時間</h3>
+                <input type="datetime-local" name="startdate" required>
+    
+                <h3 class="mt-3">掲示終了時間</h3>
+                <input type="datetime-local" name="enddate" required>
+    
+                
+                <h3 class="mt-3">バナー押下時の遷移先URL</h3>
+                <input type="url" name="clickUrl" required>
+    
+                <div class="mt-2">
+                    <h3 class="mt-3">表示・非表示設定</h3>
+                    <input class="mx-2" id="enablecheck1" type="radio" name="enableflag" value="1" required><label for="enablecheck1">表示</label>
+                    <input class="mx-2" id="enablecheck2" type="radio" name="enableflag" value="0" required><label for="enablecheck2">非表示</label>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">確認画面</button>
+            
         </form>
-        
     </div>
 @endsection
 
