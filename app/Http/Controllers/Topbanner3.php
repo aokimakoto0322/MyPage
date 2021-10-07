@@ -22,16 +22,16 @@ class Topbanner3 extends Controller
         //フォームデータ取得（画像保存）
         $banner = array();
         $banner["img"] = $resuest->bannerimg->store('banner');
-        $banner["startdate"] = date('Y-m-d h:i:s', strtotime($resuest->startdate));
-        $banner["enddate"] = date('Y-m-d h:i:s', strtotime($resuest->enddate));
+        $banner["startdate"] = date('Y-m-d H:i:s', strtotime($resuest->startdate));
+        $banner["enddate"] = date('Y-m-d H:i:s', strtotime($resuest->enddate));
         $banner["clickUrl"] = $resuest->clickUrl;
         $banner["enableflag"] = $resuest->enableflag;
 
         //SQLにバナーデータを保存
         \DB::table('carousel')->insert([
             'imgUrl'    => '/'.$banner["img"],
-            'startDate' => date('Y-m-d h:i:s', strtotime($resuest->startdate)),
-            'endDate'   => date('Y-m-d h:i:s', strtotime($resuest->enddate)),
+            'startDate' => date('Y-m-d H:i:s', strtotime($resuest->startdate)),
+            'endDate'   => date('Y-m-d H:i:s', strtotime($resuest->enddate)),
             'clickUrl'  => $resuest->clickUrl,
             'enableFlag'=> $resuest->enableflag
         ]);

@@ -15,7 +15,6 @@
 
 {{-- コンテンツ --}}
 @section('admincontent')
-    <h1 class="mx-4 my-4">TOPバナー確認画面</h1>
     <div class="container">
         <h1>以下の内容で登録が完了しました</h1>
         
