@@ -30,6 +30,7 @@
                     <h4 class="lead">掲載終了期間：{{ $item->endDate }}</h4>
                     <h4 class="lead">バナー押下時の遷移先URL：{{ $item->clickUrl }}</h4>
                     <a class="btn btn-secondary" href="/admin/topbanneredit?itemid={{$item->id}}">編集</a>
+                    <a class="btn btn-danger" href="/admin/topbannerdelete?itemid={{$item->id}}">削除</a>
                 </div>
             </div>
         @endforeach
@@ -45,6 +46,7 @@
                     <h4 class="lead">掲載終了期間：{{ $item->endDate }}</h4>
                     <h4 class="lead">バナー押下時の遷移先URL：{{ $item->clickUrl }}</h4>
                     <a class="btn btn-secondary" href="/admin/topbanneredit?itemid={{$item->id}}">編集</a>
+                    <a class="btn btn-danger" href="/admin/topbannerdelete?itemid={{$item->id}}">削除</a>
                 </div>
             </div>
         @endforeach
@@ -60,6 +62,7 @@
                     <h4 class="lead">掲載終了期間：{{ $item->endDate }}</h4>
                     <h4 class="lead">バナー押下時の遷移先URL：{{ $item->clickUrl }}</h4>
                     <a class="btn btn-secondary" href="/admin/topbanneredit?itemid={{$item->id}}">編集</a>
+                    <a class="btn btn-danger" href="/admin/topbannerdelete?itemid={{$item->id}}">削除</a>
                 </div>
             </div>
         @endforeach
