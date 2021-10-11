@@ -1,4 +1,4 @@
-@section('footer')
+@section('adminfooter')
     <footer class="footer">
         <div class="container">
             <p class="text-muted">Copyright</p>
@@ -9,25 +9,4 @@
     <script src="{{ asset('/js/slick.min.js') }}"></script>
     <script src="{{ asset('/js/main.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.js') }}"></script>
-    <script type="text/javascript">
-        $(document).ready (function() {
-            $(".full-screen").slick({
-                centerMode: true,
-                centerPadding: '5%',
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                speed: 1000,
-                infinite: true,
-            });
-        });
-
-        (function($) {
-            $(function () {
-                $('#nav-toggle').on('click', function() {
-                    $('body').toggleClass('open');
-                });
-            });
-        })(jQuery);
-    </script>
 @endsection
