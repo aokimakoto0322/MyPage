@@ -21,8 +21,6 @@ class AdminHome extends Controller
         //日付取得
         $today = date("Y/m/d H:i:s");
 
-        echo $today;
-
         //TOPバナー表示されているもの取得
         $enablebanner = \DB::table('carousel')->where('enableFlag', 1)->where('startDate', '<', $today)->where('endDate', '>', $today)->get();
 
