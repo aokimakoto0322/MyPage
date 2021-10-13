@@ -19,7 +19,7 @@ class Topbanner extends Controller
         date_default_timezone_set('Asia/Tokyo');
 
         //日付取得
-        $today = date("Y/m/d h:i:s");
+        $today = date("Y/m/d H:i:s");
  
         //TOPバナー表示されているもの取得
         $enablebanner = \DB::table('carousel')->where('enableFlag', 1)->where('startDate', '<', $today)->where('endDate', '>', $today)->get();

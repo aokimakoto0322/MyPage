@@ -24,17 +24,9 @@ class AdminHome extends Controller
         //TOPバナー表示されているもの取得
         $enablebanner = \DB::table('carousel')->where('enableFlag', 1)->where('startDate', '<', $today)->where('endDate', '>', $today)->get();
 
-        //TOPバナーで表示期間外のものを取得
-        $outlangebanner = \DB::table('carousel')->orWhere('startDate', '>', $today)->orWhere('endDate', '<', $today)->get();
-
-        //TOPバナーで非表示設定のものを取得
-        $disablebanner = \DB::table('carousel')->where('enableFlag', 0)->get();
-
         //bladeへ送る配列
         $result = [
-            'enablebanner'   => $enablebanner,
-            'outlangebanner' => $outlangebanner,
-            'disablebanner'  => $disablebanner
+            'enablebanner'   => $enablebanner
         ];
 
         return view('/admin/adminhome', $result);
