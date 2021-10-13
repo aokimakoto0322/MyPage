@@ -1,9 +1,9 @@
-{{-- 管理画面 - TOPバナー編集TOP画面 --}}
+{{-- 管理画面 - TOPバナー修正完了画面 --}}
 
 @extends('adminlayout.adminparent')
 
 {{-- ページタイトル設定 --}}
-@section('Pagetitle', 'TOPバナー完了画面')
+@section('Pagetitle', 'TOPバナー修正完了画面')
 
 
 {{-- head --}}
@@ -15,8 +15,9 @@
 
 {{-- コンテンツ --}}
 @section('admincontent')
+    <h1 class="mx-4 my-4">TOPバナー確認画面</h1>
     <div class="container">
-        <h1>以下の内容で登録が完了しました</h1>
+        <h1>以下の内容で修正が完了しました</h1>
         
         <h4 class="lead">TOPバナー画像</h4>
         <img src="{{ asset($img) }}">

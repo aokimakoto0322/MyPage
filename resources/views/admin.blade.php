@@ -40,7 +40,3 @@
 
 
 @endsection
-
-
-{{-- フッター（コピーライトバー） --}}
-@include('adminlayout.adminfooter')
