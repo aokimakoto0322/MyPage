@@ -2,15 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class Topbanner2 extends Controller
 {
-    public function get(){
-        return redirect('admin/topbanner2');
-    }
-
-    public function post(Request $resuest){
+    public function index(){
         //セッションスタート
         session_start();
 
@@ -19,15 +13,6 @@ class Topbanner2 extends Controller
             return \App::abort(404);
         }
 
-        //フォームデータ取得（画像保存）
-        $banner = array();
-        $banner["img"] = $resuest->bannerimg->store('banner');
-        $banner["startdate"] = date('Y-m-d h:i:s', strtotime($resuest->startdate));
-        $banner["enddate"] = date('Y-m-d h:i:s', strtotime($resuest->enddate));
-        $banner["clickUrl"] = $resuest->clickUrl;
-        $banner["enableflag"] = $resuest->enableflag;
-
-        
-        return view('admin/topbanner2', $banner);
+        return view('admin/topbanner2');
     }
 }

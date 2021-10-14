@@ -17,6 +17,10 @@ use App\Http\Controllers\AdminHome;
 use App\Http\Controllers\Topbanner;
 use App\Http\Controllers\Topbanner2;
 use App\Http\Controllers\Topbanner3;
+use App\Http\Controllers\Topbanneredit;
+use App\Http\Controllers\Topbanneredit2;
+use App\Http\Controllers\Topbannerdelete;
+use App\Http\Controllers\Topbannerdelete2;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,9 +62,19 @@ Route::get('/admin/topbanner', [Topbanner::class, 'index']);
 
 Route::get('/admin/topbanner2', [Topbanner2::class, 'get']);
 
-Route::post('/admin/topbanner2', [Topbanner2::class, 'post']);
+Route::get('/admin/topbanner2', [Topbanner2::class, 'index']);
 
 Route::post('/admin/topbanner3', [Topbanner3::class, 'post']);
+
+Route::get('/admin/topbanner3', [Topbanner3::class, 'get']);
+
+Route::get('/admin/topbanneredit', [Topbanneredit::class, 'index']);
+
+Route::post('/admin/topbanneredit2', [Topbanneredit2::class, 'post']);
+
+Route::get('/admin/topbannerdelete', [Topbannerdelete::class, 'index']);
+
+Route::get('/admin/topbannerdelete2', [Topbannerdelete2::class, 'index']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);
