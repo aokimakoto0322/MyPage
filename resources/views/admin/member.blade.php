@@ -16,13 +16,13 @@
 {{-- コンテンツ --}}
 @section('admincontent')
     <div class="container mt-4">
-        <a class="btn btn-primary" href="/admin/member2">新規メンバー追加</a>
+        <a class="btn btn-primary" href="/admin/memberadd">新規メンバー追加</a>
 
         <h2 class="mt-3">表示設定中メンバー</h2>
         @foreach ($enable as $item)
             <div class="row mt-3">
                 <div class="col-md-4">
-                    <img width="auto" height="500px" src="{{ $item->image }}">
+                    <img width="100%" height="auto" src="{{ $item->image }}">
                 </div>
 
                 <div class="col-md-8">
@@ -40,7 +40,6 @@
 
                 </div>
             </div>
-            
         @endforeach
     </div>
 @endsection

@@ -22,6 +22,8 @@ use App\Http\Controllers\Topbanneredit2;
 use App\Http\Controllers\Topbannerdelete;
 use App\Http\Controllers\Topbannerdelete2;
 use App\Http\Controllers\Member;
+use App\Http\Controllers\MemberAdd;
+use App\Http\Controllers\MemberAdd2;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +80,10 @@ Route::get('/admin/topbannerdelete', [Topbannerdelete::class, 'index']);
 Route::get('/admin/topbannerdelete2', [Topbannerdelete2::class, 'index']);
 
 Route::get('/admin/member', [Member::class, 'index']);
+
+Route::get('/admin/memberadd', [MemberAdd::class, 'index']);
+
+Route::post('/admin/memberadd2', [MemberAdd2::class, 'post']);
 
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
