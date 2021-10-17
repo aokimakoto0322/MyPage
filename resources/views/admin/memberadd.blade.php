@@ -34,13 +34,13 @@
                     <input maxlength="200" class="form-control" style="margin-top: 0px; margin-bottom: 0px; height: 500px;" type="text" name="intro" required>
     
                     <h3 class="mt-3">紹介動画URL</h3>
-                    <input class="form-control" type="text" name="introVideo" required>
+                    <input class="form-control" type="url" name="introVideo" required>
     
                     <h3 class="mt-3">YouTubeトップURL</h3>
-                    <input class="form-control" type="text" name="youtube" required>
+                    <input class="form-control" type="url" name="youtube" required>
     
                     <h3 class="mt-3">TwitterトップURL</h3>
-                    <input class="form-control" type="text" name="twitter" required>
+                    <input class="form-control" type="url" name="twitter" required>
     
                     <div class="mt-3">
                         <h3 class="mt-3">表示・非表示設定</h3>
@@ -48,7 +48,7 @@
                         <input class="mx-2" id="enablecheck2" type="radio" name="enableflag" value="0" required><label for="enablecheck2">非表示</label>
                     </div>
     
-                    <h3 class="mt-3">表示優先度</h3>
+                    <h3 class="mt-3">表示優先度（高い方が前方に表示）</h3>
                     <input class="form-control" type="number" name="priority" required>
 
                     <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">追加する</button>

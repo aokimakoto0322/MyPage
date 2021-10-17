@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class Topbanneredit2 extends Controller
+class Topbanner3 extends Controller
 {
     public function get(){
-        return redirect('admin/topbanner');
+        return redirect('admin/topbanner2');
     }
 
     public function post(Request $resuest){
@@ -20,18 +20,6 @@ class Topbanneredit2 extends Controller
             return \App::abort(404);
         }
 
-        //GETパラメータからレコード取得
-        $updatebanner = \DB::table('carousel')->where('id', $resuest->itemid)->get();
-
-        foreach($updatebanner as $item){
-            //画像ファイル名取得
-            $filename = $item->imgUrl;
-        }
-        
-
-        //画像削除(URL: banner/img.jpg)
-        unlink('banner/'.explode('/',$filename)[2]);
-
         //フォームデータ取得（画像保存）
         $banner = array();
         $banner["img"] = $resuest->bannerimg->store('banner');
@@ -40,17 +28,16 @@ class Topbanneredit2 extends Controller
         $banner["clickUrl"] = $resuest->clickUrl;
         $banner["enableflag"] = $resuest->enableflag;
 
-        //SQLにバナーデータをUPDATE
-        $result = \DB::table('carousel')
-        ->where('id', $resuest->itemid)
-        ->update([
+        //SQLにバナーデータを保存
+        \DB::table('carousel')->insert([
             'imgUrl'    => '/'.$banner["img"],
             'startDate' => date('Y-m-d H:i:s', strtotime($resuest->startdate)),
             'endDate'   => date('Y-m-d H:i:s', strtotime($resuest->enddate)),
-            'clickUrl'  => $banner["clickUrl"],
-            'enableFlag'=> $banner["enableflag"]
+            'clickUrl'  => $resuest->clickUrl,
+            'enableFlag'=> $resuest->enableflag
         ]);
 
-        return view('admin/topbanneredit2', $banner);
+        
+        return view('admin/topbanner3', $banner);
     }
 }

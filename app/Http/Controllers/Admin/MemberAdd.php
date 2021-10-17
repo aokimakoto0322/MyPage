@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
-class Topbanner2 extends Controller
+use Illuminate\Http\Request;
+
+class MemberAdd extends Controller
 {
     public function index(){
         //セッションスタート
@@ -13,6 +16,6 @@ class Topbanner2 extends Controller
             return \App::abort(404);
         }
 
-        return view('admin/topbanner2');
+        return view('/admin/memberadd');
     }
 }

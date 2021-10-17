@@ -12,18 +12,20 @@ use App\Http\Controllers\Send;
 use App\Http\Controllers\Detail;
 
 //管理コントローラー
-use App\Http\Controllers\Admin;
-use App\Http\Controllers\AdminHome;
-use App\Http\Controllers\Topbanner;
-use App\Http\Controllers\Topbanner2;
-use App\Http\Controllers\Topbanner3;
-use App\Http\Controllers\Topbanneredit;
-use App\Http\Controllers\Topbanneredit2;
-use App\Http\Controllers\Topbannerdelete;
-use App\Http\Controllers\Topbannerdelete2;
-use App\Http\Controllers\Member;
-use App\Http\Controllers\MemberAdd;
-use App\Http\Controllers\MemberAdd2;
+use App\Http\Controllers\Admin\Admin;
+use App\Http\Controllers\Admin\AdminHome;
+use App\Http\Controllers\Admin\Topbanner;
+use App\Http\Controllers\Admin\Topbanner2;
+use App\Http\Controllers\Admin\Topbanner3;
+use App\Http\Controllers\Admin\Topbanneredit;
+use App\Http\Controllers\Admin\Topbanneredit2;
+use App\Http\Controllers\Admin\Topbannerdelete;
+use App\Http\Controllers\Admin\Topbannerdelete2;
+use App\Http\Controllers\Admin\Member;
+use App\Http\Controllers\Admin\MemberAdd;
+use App\Http\Controllers\Admin\MemberAdd2;
+use App\Http\Controllers\Admin\MemberDelete;
+use App\Http\Controllers\Admin\MemberDelete2;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +86,10 @@ Route::get('/admin/member', [Member::class, 'index']);
 Route::get('/admin/memberadd', [MemberAdd::class, 'index']);
 
 Route::post('/admin/memberadd2', [MemberAdd2::class, 'post']);
+
+Route::get('/admin/memberdelete', [MemberDelete::class, 'index']);
+
+Route::get('/admin/memberdelete2', [MemberDelete2::class, 'index']);
 
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
