@@ -3,13 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 //フロントコントローラー
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Introduction;
-use App\Http\Controllers\News;
-use App\Http\Controllers\Contact;
-use App\Http\Controllers\Confirm;
-use App\Http\Controllers\Send;
-use App\Http\Controllers\Detail;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Home\Introduction;
+use App\Http\Controllers\Home\News;
+use App\Http\Controllers\Home\Contact;
+use App\Http\Controllers\Home\Confirm;
+use App\Http\Controllers\Home\Send;
+use App\Http\Controllers\Home\Detail;
 
 //管理コントローラー
 use App\Http\Controllers\Admin\Admin;
