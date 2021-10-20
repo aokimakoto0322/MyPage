@@ -29,6 +29,7 @@ use App\Http\Controllers\Admin\MemberDelete;
 use App\Http\Controllers\Admin\MemberDelete2;
 use App\Http\Controllers\Admin\MemberEdit;
 use App\Http\Controllers\Admin\MemberEdit2;
+use App\Http\Controllers\Admin\AdminNews;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +98,8 @@ Route::get('/admin/memberdelete2', [MemberDelete2::class, 'index']);
 Route::get('/admin/memberedit', [MemberEdit::class, 'index']);
 
 Route::post('/admin/memberedit2', [MemberEdit2::class, 'post']);
+
+Route::get('/admin/adminnews', [AdminNews::class, 'index']);
 
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');

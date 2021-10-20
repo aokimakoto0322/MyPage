@@ -9,7 +9,7 @@
           <div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarSupportedContent">
             <div class="navbar-nav mr-auto">
               <a class="nav-link ms-2" href="/admin/topbanner">TOPバナー</a>
-              <a class="nav-link ms-2" href="#">ニュース</a>
+              <a class="nav-link ms-2" href="/admin/adminnews">ニュース</a>
               <a class="nav-link ms-2" href="/admin/member">メンバーリスト</a>
               <form class="d-flex ms-5" method="post" action="/admin">
                 {{ csrf_field() }}
