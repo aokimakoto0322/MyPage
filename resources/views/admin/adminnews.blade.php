@@ -16,6 +16,7 @@
 {{-- コンテンツ --}}
 @section('admincontent')
     <div class="container">
+        <a class="btn btn-primary my-3" href="/admin/newsadd">新規ニュース追加</a>
         <h2 class="mt-4">表示中ニュース</h2>
             @foreach ($enablenews as $item)
                     <div class="row">
