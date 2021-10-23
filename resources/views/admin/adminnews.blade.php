@@ -19,7 +19,7 @@
         <a class="btn btn-primary my-3" href="/admin/newsadd">新規ニュース追加</a>
         <h2 class="mt-4">表示中ニュース</h2>
             @foreach ($enablenews as $item)
-                    <div class="row">
+                    <div class="row my-3">
                         <img class="col-sm-4" src="{{ $item->imageUrl ?? '' }}">
                         <div class="col-sm-8">
                             <h4 class="lead">表題：{{ $item->topic }}</h4>
@@ -35,7 +35,7 @@
 
         <h2 class="mt-4">表示期間外ニュース</h2>
             @foreach ($disablenews as $item)
-                    <div class="row">
+                    <div class="row my-3">
                         <img class="col-sm-4" src="{{ $item->imageUrl ?? '' }}">
                         <div class="col-sm-8">
                             <h4 class="lead">表題：{{ $item->topic }}</h4>
@@ -51,7 +51,7 @@
 
         <h2 class="mt-4">非表示設定中ニュース</h2>
             @foreach ($nonenews as $item)
-                <div class="row">
+                <div class="row my-3">
                     <img class="col-sm-4" src="{{ $item->imageUrl ?? '' }}">
                     <div class="col-sm-8">
                         <h4 class="lead">表題：{{ $item->topic }}</h4>

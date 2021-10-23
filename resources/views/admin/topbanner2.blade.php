@@ -39,7 +39,7 @@
                 </div>
             </div>
             
-            <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">編集完了する</button>
+            <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">新規作成する</button>
             
         </form>
     </div>
