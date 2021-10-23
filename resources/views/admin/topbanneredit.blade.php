@@ -28,7 +28,7 @@
                     
     
                     <h3 class="mt-3">掲示開始時間</h3>
-                    <input type="datetime-local" name="startdate" value="{{ date('Y-m-d\TH:i', strtotime($item->endDate)) }}" required>
+                    <input type="datetime-local" name="startdate" value="{{ date('Y-m-d\TH:i', strtotime($item->startDate)) }}" required>
     
                     <h3 class="mt-3">掲示終了時間</h3>
                     <input type="datetime-local" name="enddate" value="{{ date('Y-m-d\TH:i', strtotime($item->endDate)) }}" required>

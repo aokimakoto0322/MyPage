@@ -32,6 +32,8 @@ use App\Http\Controllers\Admin\MemberEdit2;
 use App\Http\Controllers\Admin\AdminNews;
 use App\Http\Controllers\Admin\AdminNewsAdd;
 use App\Http\Controllers\Admin\AdminNewsAdd2;
+use App\Http\Controllers\Admin\AdminNewsEdit;
+use App\Http\Controllers\Admin\AdminNewsEdit2;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,6 +108,10 @@ Route::get('/admin/adminnews', [AdminNews::class, 'index']);
 Route::get('/admin/newsadd', [AdminNewsAdd::class, 'index']);
 
 Route::post('/admin/newsadd2', [AdminNewsAdd2::class, 'index']);
+
+Route::get('/admin/newsedit', [AdminNewsEdit::class, 'index']);
+
+Route::post('/admin/newsedit2', [AdminNewsEdit2::class, 'post']);
 
 //laravel 7系　Route::get('/hello', 'HelloController@index');
 //Route::get('/hello', [HelloController::class, 'index']);

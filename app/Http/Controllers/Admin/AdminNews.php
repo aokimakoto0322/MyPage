@@ -23,13 +23,13 @@ class AdminNews extends Controller
         $today = date("Y/m/d H:i:s");
  
         //TOPニュース表示されているもの取得
-        $enablenews = \DB::table('news')->where('enableFlag', 1)->where('startdate', '<', $today)->where('enddate', '>', $today)->get();
+        $enablenews = \DB::table('news')->where('enableflag', 1)->where('startdate', '<', $today)->where('enddate', '>', $today)->get();
 
         //表示期間外のニュース取得
         $disablenews = \DB::table('news')->orWhere('startdate', '>', $today)->orWhere('enddate', '<', $today)->get();
 
         //非表示設定中ニュース取得
-        $nonenews = \DB::table('news')->where('enableFlag', 0)->get();
+        $nonenews = \DB::table('news')->where('enableflag', 0)->get();
 
          //bladeへ送る配列
         $result = [
