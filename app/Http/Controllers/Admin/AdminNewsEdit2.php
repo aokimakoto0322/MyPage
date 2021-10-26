@@ -53,7 +53,7 @@ class AdminNewsEdit2 extends Controller
             'enddate' => $news['enddate'],
             'enableflag' => $news['enableflag'],
             'url' => $news['url'],
-            'imageUrl'    => '/'.$news["imageurl"]
+            'imageUrl'    => $news["imageurl"]
         ]);
 
         return view('admin/adminnewsedit2', $news);
